@@ -9,13 +9,13 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class HomepageTest {
 
-    private final SelenideElement loginButton = $x("(//a[contains(@class, 'login-link')])[1]");
-    private final SelenideElement signUpButton = $x("(//a[contains(@class, 'login-link')])[2]");
+    private final SelenideElement loginLink = $x("(//a[contains(@class, 'login-link')])[1]");
+    private final SelenideElement signUpLink = $x("(//a[contains(@class, 'login-link')])[2]");
 
     @Test
     public void openPage() {
         open("https://stackoverflow.com/");
-        loginButton.shouldBe(visible).shouldBe(enabled);
-        signUpButton.shouldBe(visible).shouldBe(enabled);
+        loginLink.shouldBe(visible).shouldBe(enabled);
+        signUpLink.shouldBe(visible).shouldBe(enabled);
     }
 }
